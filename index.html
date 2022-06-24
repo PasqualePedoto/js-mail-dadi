@@ -16,24 +16,60 @@
     <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ddb740f05b.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 
 <body>
 
+    <!-- BOOTSTRAP DADI GAMES -->
+    <header class="m-5 d-flex justify-content-center align-items-center">
+        <figure class="_w-50 m-0">
+            <img src="img/Dadi.Feature.jpg" alt="dadi" class="img-fluid">
+        </figure>
+        <h1>Il gioco dei dadi</h1>
+    </header>
+
     <!-- MAIL EXCERCISE -->
     <main>
         <!-- BOOTSTRAP EMAIL ADDRESS -->
-        <div class="mb-3">
+        <!-- <div id="form" class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> -->
 
-            <!-- BOOSTRAP PRIMARY BUTTON -->
-            <button id="confirm-button" type="button" class="mt-3 btn btn-primary">Accedi</button>
+        <!-- BOOSTRAP PRIMARY BUTTON -->
+        <!-- <button id="confirm-button" type="button" class="mt-3 btn btn-primary">Accedi</button>
+        </div> -->
+
+        <!-- BOOTSTRAP DADI GAMES -->
+
+        <div class="d-flex justify-content-center">
+            <div id="userSet">
+                <i class="user fa-solid fa-dice-one fa-3x d-none"></i>
+                <i class="user fa-solid fa-dice-two fa-3x d-none"></i>
+                <i class="user fa-solid fa-dice-three fa-3x d-none"></i>
+                <i class="user fa-solid fa-dice-four fa-3x d-none"></i>
+                <i class="user fa-solid fa-dice-five fa-3x d-none"></i>
+                <i class="user fa-solid fa-dice-six fa-3x d-none"></i>
+            </div>
+            <div id="cpuSet">
+                <i class="cpu fa-solid fa-dice-one fa-3x d-none"></i>
+                <i class="cpu fa-solid fa-dice-two fa-3x d-none"></i>
+                <i class="cpu fa-solid fa-dice-three fa-3x d-none"></i>
+                <i class="cpu fa-solid fa-dice-four fa-3x d-none"></i>
+                <i class="cpu fa-solid fa-dice-five fa-3x d-none"></i>
+                <i class="cpu fa-solid fa-dice-six fa-3x d-none"></i>
+            </div>
         </div>
+        <p id="win" class="text-center h2 d-none">HAI VINTO!!!</p>
+        <p id="lose" class="text-center h2 d-none">HAI PERSO!!!</p>
+        <p id="pari" class="text-center h2 d-none">PAREGGIO!!!</p>
     </main>
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/mail.js"></script> -->
+    <script src="js/dadi.js"></script>
 </body>
 
 </html>

@@ -2,10 +2,11 @@
 
 const emailList = ['pasquale@gmail.com', 'tunnuzzoo@gmail.com', 'marco@gmail.com', 'fabio@gmail.com', 'francesca@gmail.com', 'fabrizio@gmail.com', 'enrico@gmail.com'];
 
-// # Bersagliamo il button e il form dell'email
+// # Bersagliamo il buttoni,il form dell'email e il div form
 
 const button = document.getElementById('confirm-button');
 const emailForm = document.getElementById('exampleFormControlInput1');
+const form = document.getElementById('form');
 
 let exist = null;
 
@@ -20,4 +21,5 @@ button.addEventListener('click', function () {
     // L'alert va messo fuori altrimenti crea problemi al ciclo for
     if (exist) alert('Benvenuto!');
     else alert('Spiacenti, email non valida.');
+
 })

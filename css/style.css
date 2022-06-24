@@ -3,3 +3,22 @@
 main {
     padding: 100px;
 }
+
+/* Altezza fissa */
+
+._w-50 {
+    width: 50px;
+}
+
+/* Modelliamo il movimento dei dadi */
+
+.fa-solid.fa-3x {
+    margin: 100px;
+    transform: rotate(0deg);
+
+    transition: transform 0.5s linear, transform 0.5s linear;
+}
+
+.fa-solid.fa-3x:hover {
+    transform: rotate(360deg);
+}
