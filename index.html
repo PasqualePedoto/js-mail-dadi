@@ -46,26 +46,36 @@
         <!-- BOOTSTRAP DADI GAMES -->
 
         <div class="d-flex justify-content-center">
-            <div id="userSet">
-                <i class="user fa-solid fa-dice-one fa-3x d-none"></i>
-                <i class="user fa-solid fa-dice-two fa-3x d-none"></i>
-                <i class="user fa-solid fa-dice-three fa-3x d-none"></i>
-                <i class="user fa-solid fa-dice-four fa-3x d-none"></i>
-                <i class="user fa-solid fa-dice-five fa-3x d-none"></i>
-                <i class="user fa-solid fa-dice-six fa-3x d-none"></i>
+            <div>
+                <div class="text-center d-none userLabel">USER</div>
+                <div id="userSet">
+                    <i class="user fa-solid fa-dice-one fa-3x d-none"></i>
+                    <i class="user fa-solid fa-dice-two fa-3x d-none"></i>
+                    <i class="user fa-solid fa-dice-three fa-3x d-none"></i>
+                    <i class="user fa-solid fa-dice-four fa-3x d-none"></i>
+                    <i class="user fa-solid fa-dice-five fa-3x d-none"></i>
+                    <i class="user fa-solid fa-dice-six fa-3x d-none"></i>
+                </div>
             </div>
-            <div id="cpuSet">
-                <i class="cpu fa-solid fa-dice-one fa-3x d-none"></i>
-                <i class="cpu fa-solid fa-dice-two fa-3x d-none"></i>
-                <i class="cpu fa-solid fa-dice-three fa-3x d-none"></i>
-                <i class="cpu fa-solid fa-dice-four fa-3x d-none"></i>
-                <i class="cpu fa-solid fa-dice-five fa-3x d-none"></i>
-                <i class="cpu fa-solid fa-dice-six fa-3x d-none"></i>
+            <div>
+                <div class="text-center d-none cpuLabel">CPU</div>
+                <div id="cpuSet">
+                    <i class="cpu fa-solid fa-dice-one fa-3x d-none"></i>
+                    <i class="cpu fa-solid fa-dice-two fa-3x d-none"></i>
+                    <i class="cpu fa-solid fa-dice-three fa-3x d-none"></i>
+                    <i class="cpu fa-solid fa-dice-four fa-3x d-none"></i>
+                    <i class="cpu fa-solid fa-dice-five fa-3x d-none"></i>
+                    <i class="cpu fa-solid fa-dice-six fa-3x d-none"></i>
+                </div>
             </div>
         </div>
         <p id="win" class="text-center h2 d-none">HAI VINTO!!!</p>
         <p id="lose" class="text-center h2 d-none">HAI PERSO!!!</p>
         <p id="pari" class="text-center h2 d-none">PAREGGIO!!!</p>
+        <div class="d-flex justify-content-center">
+            <button id="restart-button" type="button" class="d-none mt-3 btn btn-primary">Re-Start!</button>
+            <button id="start-button" type="button" class="mt-3 btn btn-primary">Start!</button>
+        </div>
     </main>
     <!-- JS -->
     <!-- <script src="js/mail.js"></script> -->

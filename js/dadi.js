@@ -46,62 +46,93 @@ if (userChoice === 'si') {
     console.log(userNumber);
     console.log(cpuNumber);
 
-    // Prendiamo il dado dell'user
+    const startButton = document.getElementById('start-button');
+    const restartButton = document.getElementById('restart-button');
 
-    for (let i = 0; i < 6; i++) {
-        if (userNumber === 1) {
-            oneDiceUser.classList.remove('d-none');
-            oneDiceUser.classList.add('d-block');
-        } else if (userNumber === 2) {
-            twoDiceUser.classList.remove('d-none');
-            twoDiceUser.classList.add('d-block');
-        } else if (userNumber === 3) {
-            threeDiceUser.classList.remove('d-none');
-            threeDiceUser.classList.add('d-block');
-        } else if (userNumber === 4) {
-            fourDiceUser.classList.remove('d-none');
-            fourDiceUser.classList.add('d-block');
-        } else if (userNumber === 5) {
-            fiveDiceUser.classList.remove('d-none');
-            fiveDiceUser.classList.add('d-block');
-        } else if (userNumber === 6) {
-            sixDiceUser.classList.remove('d-none');
-            sixDiceUser.classList.add('d-block');
+
+    startButton.addEventListener('click', function () {
+
+        // # Mi prendo i titoli e li faccio comparire
+
+        const userLabel = document.querySelector('.userLabel');
+        const cpuLabel = document.querySelector('.cpuLabel');
+
+        startButton.classList.add('d-none');
+        restartButton.classList.remove('d-none');
+        restartButton.classList.add('d-block');
+
+
+
+        // Prendiamo il dado dell'user
+
+        for (let i = 0; i < 6; i++) {
+            if (userNumber === 1) {
+                oneDiceUser.classList.remove('d-none');
+                oneDiceUser.classList.add('d-block');
+            } else if (userNumber === 2) {
+                twoDiceUser.classList.remove('d-none');
+                twoDiceUser.classList.add('d-block');
+            } else if (userNumber === 3) {
+                threeDiceUser.classList.remove('d-none');
+                threeDiceUser.classList.add('d-block');
+            } else if (userNumber === 4) {
+                fourDiceUser.classList.remove('d-none');
+                fourDiceUser.classList.add('d-block');
+            } else if (userNumber === 5) {
+                fiveDiceUser.classList.remove('d-none');
+                fiveDiceUser.classList.add('d-block');
+            } else if (userNumber === 6) {
+                sixDiceUser.classList.remove('d-none');
+                sixDiceUser.classList.add('d-block');
+            }
         }
-    }
 
-    for (let i = 0; i < 6; i++) {
-        if (cpuNumber === 1) {
-            oneDiceCpu.classList.remove('d-none');
-            oneDiceCpu.classList.add('d-block');
-        } else if (cpuNumber === 2) {
-            twoDiceCpu.classList.remove('d-none');
-            twoDiceCpu.classList.add('d-block');
-        } else if (cpuNumber === 3) {
-            threeDiceCpu.classList.remove('d-none');
-            threeDiceCpu.classList.add('d-block');
-        } else if (cpuNumber === 4) {
-            fourDiceCpu.classList.remove('d-none');
-            fourDiceCpu.classList.add('d-block');
-        } else if (cpuNumber === 5) {
-            fiveDiceCpu.classList.remove('d-none');
-            fiveDiceCpu.classList.add('d-block');
-        } else if (cpuNumber === 6) {
-            sixDiceCpu.classList.remove('d-none');
-            sixDiceCpu.classList.add('d-block');
+        //Prendiamo il dado della cpu
+
+        for (let i = 0; i < 6; i++) {
+            if (cpuNumber === 1) {
+                oneDiceCpu.classList.remove('d-none');
+                oneDiceCpu.classList.add('d-block');
+            } else if (cpuNumber === 2) {
+                twoDiceCpu.classList.remove('d-none');
+                twoDiceCpu.classList.add('d-block');
+            } else if (cpuNumber === 3) {
+                threeDiceCpu.classList.remove('d-none');
+                threeDiceCpu.classList.add('d-block');
+            } else if (cpuNumber === 4) {
+                fourDiceCpu.classList.remove('d-none');
+                fourDiceCpu.classList.add('d-block');
+            } else if (cpuNumber === 5) {
+                fiveDiceCpu.classList.remove('d-none');
+                fiveDiceCpu.classList.add('d-block');
+            } else if (cpuNumber === 6) {
+                sixDiceCpu.classList.remove('d-none');
+                sixDiceCpu.classList.add('d-block');
+            }
         }
-    }
 
-    if (userNumber > cpuNumber) {
-        win.classList.remove('d-none');
-        win.classList.add('d-block');
-    } else if (userNumber < cpuNumber) {
-        lose.classList.remove('d-none');
-        lose.classList.add('d-block');
-    } else {
-        pari.classList.remove('d-none');
-        pari.classList.add('d-block');
-    }
+        // # Faccio comparire le label dei dadi
+
+        userLabel.classList.remove('d-none');
+        userLabel.classList.add('d-block');
+        cpuLabel.classList.remove('d-none');
+        cpuLabel.classList.add('d-block');
+
+        if (userNumber > cpuNumber) {
+            win.classList.remove('d-none');
+            win.classList.add('d-block');
+        } else if (userNumber < cpuNumber) {
+            lose.classList.remove('d-none');
+            lose.classList.add('d-block');
+        } else {
+            pari.classList.remove('d-none');
+            pari.classList.add('d-block');
+        }
+
+        restartButton.addEventListener('click', function () {
+            window.location.reload();
+        })
+    })
 
 } else {
     alert('Alla prossima!');
